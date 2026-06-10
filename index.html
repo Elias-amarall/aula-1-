@@ -3,9 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currículo - Elias Amaral</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6; 
+            background-color: #ebd3d3;
+            color: #000000; 
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav { 
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav h1 {
+            font-size: 1.8rem;
+        }
+
+        nav ul{
+            display:flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        h2{
+            font-size:2rem;
+            margin-bottom: 2rem;
+            color: #667eea;
+            text-align:center;
+        }
+
+        /* Secão Hero */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .hero h2 {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #667eea;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Seção Sobre */
+        .sobre {
+            background-color: white;
+        }
+
+        .sobre p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        /* Secão Habilidades */
+        .habilidades {
+            background-color: white;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        /* Seção Projetos */
+        .projetos {
+            background-color: #f9f9f9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            background-color: #667eea;
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .project-header h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: #e0e7ff;
+            color: #667eea;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Seção Contato */
+        .contato {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contato h2 {
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+            .hero h2 {
+                font-size: 1.5reem;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <nav class="container">
+            <h1>Currículo - Elias Amaral</h1>
+            <ul>
+             <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Seção Hero -->
+     <section class="hero">
+        <div class="container">
+            <h2>Bem-vindo ao meu currículo!</h2>
+            <p>Desenvolvedor full-stack com experiência em JavaScript, React e Node.js. 
+                Muito dedicado a criar soluções eficientes e escaláveis para desafios complexos. Apaixonado por aprender novas tecnologias e aprimorar minhas habilidades constantemente.
+                <a href="#projetos" class="btn">Ver Projetos</a>
+        </div>
+     </section>
+
+     <!-- Seção Sobre -->
+      <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Sou um desenvolvedor full-stack com experiência em JavaScript, React e Node.js. Tenho paixão por criar soluções eficientes e escaláveis para desafios complexos. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades constantemente.
+            </p>
+            <p>Adoro trabalhar em equipe e compartilhar conhecimento com outros desenvolvedores.
+            </p>
+            </div>
+        </div>
+        </section>
+
+        <!-- Seção Habilidades -->
+         <section id="habilidades" class="habilidades">
+        
+    <div class="container">
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Informações sobre o candidato...</p>
+        </section>
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <p>Detalhes das habilidades...</p>
+        </section>
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <p>Detalhes dos projetos...</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Informações de contato...</p>
+        </section>
+        <section id="formacao">
+            <h2>Formação Acadêmica</h2>
+            <p>Informações sobre a formação...</p>
+
+
+
+<!-- Seção Habilidades -->
+    <section id="habilidades" class="habilidades">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML & CSS</h3>
+                    <p>Estrutura e estilo de páginas web modernas e responsivas.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Desenvolvimento de aplicações interativas e dinâmicas.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>React</h3>
+                    <p>Criação de interfaces modernas com componentes reutilizáveis.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Node.js</h3>
+                    <p>Desenvolvimento de APIs e servidores backend robustos.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Git & GitHub</h3>
+                    <p>Controle de versão e colaboração em projetos.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Design Responsivo</h3>
+                    <p>Criação de sites que funcionam em todos os dispositivos.</p>
+                </div>
+            </div>
+
+
+        <!-- Seção Projetos -->
+        <section id="projetos" class="projetos">
+            <div class="container">
+                <h2> Meus Projetos</h2>
+                <div class="projects-grip">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Projeto 1: Portfólio Pessoal</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Um site de portfólio pessoal para mostrar meus projetos e habilidades. Desenvolvido com React e hospedado no GitHub Pages.</p>
+                            <div class="project-tags">
+                                 <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+
+                   </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Projeto 2: To-Do List</h3>
+                </div>
+                <div class="project-body">
+                    <p>Uma aplicação de lista de tarefas simples, permitindo aos usuários adicionar, editar e excluir tarefas. Desenvolvido com React e Node.js.</p>
+                    <div class="project-tags">
+                        <span class="tag">React
+            </div>
+
+               <div class="project-card">
+                    <div class="project-header">
+                        <h3>Projeto 3</h3>
+                        <p>Sistema de gerenciamento</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Descrição do projeto: Um sistema completo de gerenciamento com integração de banco de dados e autenticação segura.</p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Database</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Vamos Conversar</h2>
+            <p>Tenho interesse em oportunidades e novas conexões. Sinta-se à vontade para me contatar!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <p>Email:</p>
+                    <a href="mailto:seu-email@example.com">seu-email@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <p>LinkedIn:</p>
+                    <a href="https://linkedin.com/in/seu-perfil" target="_blank">linkedin.com/in/seu-perfil</a>
+                </div>
+                <div class="contact-item">
+                    <p>GitHub:</p>
+                    <a href="https://github.com/Elias-amarall" target="_blank">github.com/Elias-amarall</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Elias Amaral. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+        </section>
+    </div>
 </body>
 </html>
